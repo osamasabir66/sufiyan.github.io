@@ -119,6 +119,7 @@
     .nav-bar {
         margin: 0;
         padding: 0;
+        height: auto !important;
     }
 
     .navbar-light .navbar-nav .nav-link  {
@@ -461,4 +462,23 @@
 
 .bg-light {
     background-color: rgb(237 70 127 / 15%) !important;
+}
+
+.logoicons{
+    width: 70px;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        height: auto !important;
+    }
+    
+.logoicons{
+    width: 55px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
 }
