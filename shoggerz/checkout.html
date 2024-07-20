@@ -531,23 +531,23 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="display-5 animated fadeIn mb-4">Shopping Cart</h1> 
+                <h1 class="display-5 animated fadeIn mb-4">Checkout</h1> 
                     <nav aria-label="breadcrumb animated fadeIn">
                     <ol class="breadcrumb text-uppercase mb-5">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item text-body active" aria-current="page">Add to Cart</li>
+                        <li class="breadcrumb-item"><a href="cart.html">Add to Cart</a></li>
+                        <li class="breadcrumb-item text-body active" aria-current="page">Checkout</li>
                     </ol>
                 </nav>
             </div>
-            <div class="col-md-8">
+
+            
+            <div class="col-md-4">
                 <div class="table-cart">
                     <table>
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th></th>
+                                <h3>Order Summary <a class="editbtn" href="cart.html"><i class="fa fa-edit"></i></a></h3>
                             </tr>
                         </thead>
                         <tbody>
@@ -559,23 +559,11 @@
                                         </div>
                                         <div class="name-product">
                                             Huda Beauty Faux Filler Extra Shine Lip Gloss
-                                            <br>G2356
+                                            <br><b>Qty: 1</b>
                                         </div>
                                         <div class="price">
                                             $1,250.00
                                         </div>
-                                    </div>
-                                </td>
-                                <td class="product-count">
-                                    <form action="#" class="count-inlineflex">
-                                        <div class="qtyminus">-</div>
-                                        <input type="text" name="quantity" value="1" class="qty">
-                                        <div class="qtyplus">+</div>
-                                    </form>
-                                </td>
-                                <td>
-                                    <div class="total">
-                                        $6,250.00
                                     </div>
                                 </td>
                             </tr>
@@ -587,33 +575,21 @@
                                         </div>
                                         <div class="name-product">
                                             Urban Decay All Nighter Setting Spray 118m
-                                            <br>G2356
+                                            <br><b>Qty: 1</b>
                                         </div>
                                         <div class="price">
                                             $1,250.00
                                         </div>
                                     </div>
                                 </td>
-                                <td class="product-count">
-                                    <form action="#" class="count-inlineflex">
-                                        <div class="qtyminus">-</div>
-                                        <input type="text" name="quantity" value="1" class="qty">
-                                        <div class="qtyplus">+</div>
-                                    </form>
-                                </td>
-                                <td>
-                                    <div class="total">
-                                        $6,250.00
-                                    </div>
-                                </td>
                             </tr>
                         </tbody>
                     </table>
-                    <div class="coupon-box">
+                    <div class="coupon-box" style="padding:15px;margin:10px 0;">
                         <form action="#" method="get" accept-charset="utf-8">
                             <div class="coupon-input">
-                                <input type="text" name="coupon code" placeholder="Coupon Code">
-                                <button type="submit" class="round-black-btn">Apply Coupon</button>
+                                <input type="text" name="coupon code" placeholder="Coupon Code" style="width: 140px !important;">
+                                <button type="submit" class="round-black-btn" style="padding: 8px 15px;">Apply Coupon</button>
                             </div>
                         </form>
                     </div>
@@ -621,13 +597,7 @@
                 <!-- /.table-cart -->
 
 
-
-          
-            </div>
-            <!-- /.col-md-8 -->
-            <div class="col-md-4">
-                <div class="cart-totals">
-                    <h3>Cart Totals</h3>
+                <div class="cart-totals mb-5">
                     <form action="#" method="get" accept-charset="utf-8">
                         <table>
                             <tbody>
@@ -645,9 +615,6 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="btn-cart-totals">
-                            <a href="checkout.html" class="btn btn-primary" title="">Proceed to Checkout</a>
-                        </div>
                         <!-- /.btn-cart-totals -->
                     </form>
                     <!-- /form -->
@@ -655,6 +622,83 @@
                 <!-- /.cart-totals -->
             </div>
             <!-- /.col-md-4 -->
+            <div class="col-md-8">
+
+                <div class="wow fadeInUp" data-wow-delay="0.5s">
+                    <h3 class="mb-4">Customer Details</h3>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                                    <label for="firstname">First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                                    <label for="lastname">Last Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Phone">
+                                    <label for="phone">Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="wow fadeInUp" data-wow-delay="0.5s">
+                    <h3 class="mb-4 mt-4">Delivery Details</h3>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" value="Pakistan" disabled id="country" placeholder="Country">
+                                    <label for="country">Country</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="region" placeholder="Region">
+                                    <label for="region">Region</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="address" placeholder="Address">
+                                    <label for="address">Address</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="city" placeholder="City">
+                                    <label for="city">City</label>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-floating">
+                                    <input type="tel" class="form-control" id="postal-code" placeholder="Zip / Postal code">
+                                    <label for="postal-code">Zip / Postal code</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Continue</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+          
+            </div>
+            <!-- /.col-md-8 -->
         </div>
     </div>
 </div>
